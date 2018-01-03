@@ -9,7 +9,7 @@ shd_enable="YES"
 ```
 2. Replace /etc/ssh/sshd_config with the included file `sshd_config`, and change `port` to something non-standard (and not 22)
 3. Replace /etc/ssh/ssh_config with the included file `ssh_config`
-4. Recreate all ssh host keys (/etc/ssh/ssh_host_*key*)
+4. Recreate all ssh host keys without passwords (/etc/ssh/ssh_host_*key*)
 ```
 rm /etc/ssh/ssh_host_*key*
 ssh-keygen -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N "" < /dev/null
