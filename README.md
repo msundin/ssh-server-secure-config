@@ -34,4 +34,4 @@ ssh-keygen -t rsa -b 4096 -o -a 100
 ```
 8. Preferly add the private keys as an attachment to a record in your [KeePass](https://www.keepas.info) and then use [KeeAgent](https://lechnology.com/software/keeagent/) when using the keys for SSH sessions.
 9. If you for some reason copy a private key to Windows, generated in Linux/FreeBSD/etc terminal, mind the whitespaces and save the file in UTF-8 format if you want to use PuTTYgen to convert the keys to PuTTY format. Test the validity of the copied key by trying to import it into PuTTYget. If it fails, you have format errors or it is not saved in UTF-8 format.
-10. Remove private client keys from the server (when you have stored them in PuTTY or elsewhere).
+10. Remove generated private client keys from the server (not the server keys) when you have stored them safely in PuTTY or elsewhere. This is for security reasons.
