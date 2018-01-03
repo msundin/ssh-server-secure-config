@@ -97,8 +97,6 @@
 #   VerifyHostKeyDNS no
 #   VisualHostKey no
 #   XAuthLocationi xauth
-
-# XAuthLocation added by XQuartz (http://xquartz.macosforge.org)
 #Host *
 #    XAuthLocation /opt/X11/bin/xauth
 
