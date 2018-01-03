@@ -15,17 +15,12 @@
 # FreeBSD has a few additional options.
 
 #Port 22
-Port <some unusual port other than 22>
 #AddressFamily any
 #ListenAddress 0.0.0.0
 #ListenAddress ::
 
 # The default requires explicit activation of protocol 1
 #Protocol 2
-Protocol 2
-HostKey /etc/ssh/ssh_host_ed25519_key
-HostKey /etc/ssh/ssh_host_rsa_key
-
 
 # HostKey for protocol version 1
 #HostKey /etc/ssh/ssh_host_key
@@ -84,6 +79,10 @@ Subsystem sftp  /usr/libexec/sftp-server
 # ForceCommand cvs server
 
 # https://stribika.github.io/2015/01/04/secure-secure-shell.html
+Port <some unusual port other than 22>
+Protocol 2
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
 AllowGroups ssh-user
 PasswordAuthentication no
 ChallengeResponseAuthentication no
@@ -91,4 +90,3 @@ PubkeyAuthentication yes
 Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
 KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group-exchange-sha256
 MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
-
