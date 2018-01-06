@@ -79,6 +79,7 @@ Subsystem sftp  /usr/libexec/sftp-server
 # ForceCommand cvs server
 
 # https://stribika.github.io/2015/01/04/secure-secure-shell.html
+LogLevel VERBOSE
 Port <some unusual port other than 22>
 Protocol 2
 HostKey /etc/ssh/ssh_host_ed25519_key
